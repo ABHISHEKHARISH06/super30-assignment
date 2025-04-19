@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Hypnosis</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #111122;
+            overflow: hidden;
+            margin: 0;
+        }
+        
+        .hypnosis {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .hypno-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            animation: spin 3s linear infinite;
+            filter: drop-shadow(0 0 5px currentColor);
+        }
+        
+        .hypno-ring:nth-child(1) {
+            width: 180px;
+            height: 180px;
+            border-top-color: #ff00ff;
+            border-bottom-color: #ff00ff;
+            animation-duration: 8s;
+        }
+        
+        .hypno-ring:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            top: 25px;
+            left: 25px;
+            border-left-color: #00ffff;
+            border-right-color: #00ffff;
+            animation-duration: 6s;
+            animation-direction: reverse;
+        }
+        
+        .hypno-ring:nth-child(3) {
+            width: 120px;
+            height: 120px;
+            top: 40px;
+            left: 40px;
+            border-top-color: #ffff00;
+            border-bottom-color: #ffff00;
+            animation-duration: 4s;
+        }
+        
+        .hypno-center {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            top: 70px;
+            left: 70px;
+            background: conic-gradient(
+                #ff00ff, #00ffff, #ffff00, #ff00ff
+            );
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+            filter: drop-shadow(0 0 10px white);
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="hypnosis">
+        <div class="hypno-ring"></div>
+        <div class="hypno-ring"></div>
+        <div class="hypno-ring"></div>
+        <div class="hypno-center"></div>
+    </div>
+</body>
+</html>

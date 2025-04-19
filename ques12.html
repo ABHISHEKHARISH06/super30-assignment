@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Headphones</title>
+    <style>
+        /* Mobile-first base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 16px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 360px;
+        }
+        
+        .product-image-container {
+            position: relative;
+            padding-top: 100%; /* Square aspect ratio */
+            background: #f0f0f0;
+        }
+        
+        .product-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 20%;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #2563eb;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .product-content {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1f2937;
+        }
+        
+        .product-description {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        
+        .product-price {
+            font-size: 20px;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 16px;
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #2563eb;
+            border: 1px solid #d1d5db;
+        }
+        
+        .btn-secondary:hover {
+            background: #f9fafb;
+        }
+        
+        /* Tablet styles */
+        @media (min-width: 640px) {
+            .product-card {
+                max-width: 500px;
+            }
+            
+            .product-title {
+                font-size: 20px;
+            }
+            
+            .product-price {
+                font-size: 24px;
+            }
+        }
+        
+        /* Desktop styles */
+        @media (min-width: 1024px) {
+            .product-card {
+                display: flex;
+                max-width: 800px;
+                max-height: 400px;
+            }
+            
+            .product-image-container {
+                flex: 1;
+                padding-top: 0;
+                height: 400px;
+            }
+            
+            .product-image {
+                padding: 15%;
+            }
+            
+            .product-content {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 32px;
+            }
+            
+            .product-title {
+                font-size: 24px;
+            }
+            
+            .product-description {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="product-card">
+        <div class="product-image-container">
+            <span class="product-badge">Best Seller</span>
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                 alt="Premium Over-Ear Headphones" 
+                 class="product-image">
+        </div>
+        <div class="product-content">
+            <h2 class="product-title">AudioPro X900 Over-Ear Headphones</h2>
+            <p class="product-description">
+                Professional-grade over-ear headphones with active noise cancellation. 
+                50mm drivers deliver crisp highs and deep bass. 30-hour battery life 
+                with plush memory foam ear cushions for all-day comfort.
+            </p>
+            <div class="product-price">₹2000</div>
+            <div class="product-actions">
+                <button class="btn btn-primary">Add to Cart</button>
+                <button class="btn btn-secondary">Wishlist</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

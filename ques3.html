@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Semantic Soirée</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #f2f5f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #6c5ce7;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    nav {
+      background-color: #2d3436;
+      padding: 1rem;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    nav li {
+      margin: 0 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #81ecec;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+
+    section h2 {
+      color: #6c5ce7;
+      margin-bottom: 1rem;
+    }
+
+    article {
+      margin-top: 1rem;
+    }
+
+    article h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    aside {
+      background: #dff9fb;
+      border-left: 5px solid #6c5ce7;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 0 8px 8px 0;
+    }
+
+    footer {
+      background-color: #2d3436;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer small {
+      opacity: 0.8;
+    }
+
+    @media(max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav li {
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Semantic Soirée</h1>
+    <p>Every tag has a role — and they're all invited!</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#intro">Intro</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#guests">Guest List</a></li>
+      <li><a href="#credits">Credits</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="intro">
+      <h2>What's This Party About?</h2>
+      <article>
+        <h3>Semantic Power</h3>
+        <p>Using semantic HTML makes your code easier to read, maintain, and navigate — both for you and assistive tech. It's like giving your elements purpose!</p>
+      </article>
+      <article>
+        <h3>The Rules</h3>
+        <p>No anonymous <code>&lt;div&gt;</code> tags allowed! Everyone must come dressed as a meaningful tag: <code>&lt;header&gt;</code>, <code>&lt;article&gt;</code>, or <code>&lt;footer&gt;</code> are all welcome.</p>
+      </article>
+    </section>
+
+    <section id="activities">
+      <h2>Party Lineup</h2>
+      <article>
+        <h3>6:00 PM - Semantic Icebreakers</h3>
+        <p>Match the element to its role! Is <code>&lt;section&gt;</code> the planner or the life of the party?</p>
+      </article>
+      <article>
+        <h3>8:00 PM - Accessibility Karaoke</h3>
+        <p>Screens will read it aloud — how semantic is your song?</p>
+      </article>
+    </section>
+
+    <aside>
+      <h3>Pro Tip</h3>
+      <p>If your page makes sense *without* CSS, congrats! You're doing semantic HTML right.</p>
+    </aside>
+
+    <section id="guests">
+      <h2>Special Guests</h2>
+      <article>
+        <h3>&lt;article&gt;</h3>
+        <p>Brings the content to life — always has something interesting to say.</p>
+      </article>
+      <article>
+        <h3>&lt;aside&gt;</h3>
+        <p>Lives on the edge but always adds value. Sometimes quirky, always insightful.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer id="credits">
+    <p>Thanks for attending the most meaningful party on the web!</p>
+    <small>&copy; 2025 Semantic Soirée Crew | HTML lives matter 😄</small>
+  </footer>
+</body>
+</html>

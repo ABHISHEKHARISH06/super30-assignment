@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Royalty</title>
+    <style>
+        /* Modern CSS Reset */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Color Variables */
+        :root {
+            --royal-purple: #6a0dad;
+            --gold: #ffd700;
+            --silver: #c0c0c0;
+            --dark: #1a1a1a;
+            --light: #f8f8f8;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--royal-purple), #4b0082);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 100;
+        }
+
+        .header-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-subtitle {
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* Main Layout Container */
+        .container {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+        }
+
+        /* Sidebar Styles */
+        aside {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 1.5rem;
+            flex: 0 0 250px;
+        }
+
+        .sidebar-title {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--silver);
+        }
+
+        .nav-menu {
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-bottom: 1rem;
+        }
+
+        .nav-link {
+            color: var(--light);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: var(--royal-purple);
+            transform: translateX(5px);
+        }
+
+        /* Main Content Styles */
+        main {
+            flex: 1;
+            padding: 2rem;
+            min-width: 300px; /* Prevent squeezing */
+        }
+
+        .content-title {
+            color: var(--royal-purple);
+            margin-bottom: 1.5rem;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            color: var(--royal-purple);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(135deg, var(--dark), #000);
+            color: var(--silver);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: auto;
+        }
+
+        .footer-text {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-link {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            aside {
+                flex: 0 0 auto;
+                order: 2; /* Move sidebar below on mobile */
+            }
+
+            .nav-menu {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .nav-item {
+                margin-bottom: 0;
+            }
+
+            .nav-link {
+                padding: 0.5rem 1rem;
+                background-color: rgba(106, 13, 173, 0.2);
+            }
+
+            .nav-link:hover {
+                transform: none;
+                background-color: var(--royal-purple);
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 1rem;
+            }
+
+            .header-title {
+                font-size: 1.5rem;
+            }
+
+            main, aside {
+                padding: 1rem;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Responsive Royalty</h1>
+        <p class="header-subtitle">A layout fit for a king/queen across all devices</p>
+    </header>
+
+    <div class="container">
+        <aside>
+            <h2 class="sidebar-title">Royal Decrees</h2>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link">Home Kingdom</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Royal Gallery</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Kingdom News</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Court Events</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact the Crown</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <h2 class="content-title">Royal Proclamations</h2>
+            
+            <article class="content-card">
+                <h3 class="card-title">The Kingdom Goes Mobile</h3>
+                <p>Our royal website now adapts to all devices, from grand castle desktops to humble peasant smartphones. No subject shall be left behind in accessing our royal content.</p>
+            </article>
+            
+            <article class="content-card">
+                <h3 class="card-title">Feast Day Announcement</h3>
+                <p>The annual kingdom feast will be held next fortnight. All responsive citizens are invited. Please adjust your screen sizes accordingly when viewing the menu.</p>
+            </article>
+            
+            <article class="content-card">
+                <h3 class="card-title">Royal Decree: Flexbox for All</h3>
+                <p>By order of the crown, all layouts shall use modern CSS techniques. Tables for layout are hereby banished from the realm, punishable by having to use IE6 for a week.</p>
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        <p class="footer-text">© 2025 The Responsive Kingdom</p>
+        <p class="footer-text">Built with <a href="#" class="footer-link">HTML</a> and <a href="#" class="footer-link">CSS</a> magic</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth AF Button</title>
+    <style>
+        /* Base styles - because even smooth operators need a foundation */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        /* The button that'll make CSS developers swoon */
+        .smooth-button {
+            padding: 18px 36px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            background-color: #4a00e0;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            outline: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            
+            /* The magic sauce - smooth transitions */
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            
+            /* Initial transform state */
+            transform: scale(1) rotate(0deg);
+        }
+
+        /* Hover effects smoother than Barry White's voice */
+        .smooth-button:hover {
+            /* Color change - from deep purple to vibrant pink */
+            background-color: #ff4d8d;
+            
+            /* Grows slightly larger - but not too aggressive */
+            transform: scale(1.1) rotate(5deg);
+            
+            /* Shadow grows with the button */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            
+            /* Text color change for contrast */
+            color: #fff;
+        }
+
+        /* Active state - for when you really click with someone */
+        .smooth-button:active {
+            transform: scale(0.95) rotate(-2deg);
+            transition: all 0.2s ease;
+        }
+
+        /* Pseudo-element for extra smoothness */
+        .smooth-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        /* Shine effect on hover */
+        .smooth-button:hover::before {
+            left: 100%;
+        }
+
+        /* Bonus: Focus state for accessibility */
+        .smooth-button:focus {
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <button class="smooth-button">
+        Hover Me
+    </button>
+</body>
+</html>

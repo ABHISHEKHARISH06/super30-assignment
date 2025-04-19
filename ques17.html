@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme Gallery 2.0</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0f0f, #222);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 2rem;
+      min-height: 100vh;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.8rem;
+      color: #fff;
+      text-shadow: 0 0 15px #00ffff, 0 0 30px #ff00ff;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .meme-card {
+      flex: 1 1 300px;
+      max-width: 350px;
+      height: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+      transition: 0.3s ease;
+    }
+
+    .meme-card:hover {
+      transform: scale(1.05) rotate(-1deg);
+      box-shadow: 0 0 30px #0ff, 0 0 20px #f0f;
+      z-index: 10;
+    }
+
+    .meme-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.85) contrast(1.1);
+      transition: 0.4s ease;
+    }
+
+    .meme-card:hover .meme-img {
+      transform: scale(1.08);
+      filter: brightness(1) saturate(1.3);
+    }
+
+    .meme-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(5px);
+      font-size: 1.1rem;
+      text-align: center;
+      transform: translateY(100%);
+      transition: transform 0.3s ease-out;
+    }
+
+    .meme-card:hover .meme-caption {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .meme-card {
+        height: 250px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        gap: 1rem;
+      }
+
+      .meme-card {
+        flex: 1 1 100%;
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>💥 Meme Gallery 💥</h1>
+
+  <div class="gallery">
+    <div class="meme-card">
+      <img class="meme-img" src="https://i.imgflip.com/1otk96.jpg" alt="Programmer vs Code">
+      <div class="meme-caption">My code at 2 AM vs My code at 9 AM</div>
+    </div>
+
+    <div class="meme-card">
+      <img class="meme-img" src="https://i.imgflip.com/30b1gx.jpg" alt="Confused Math Lady">
+      <div class="meme-caption">When CSS margin collapses and no one knows why</div>
+    </div>
+
+    <div class="meme-card">
+      <img class="meme-img" src="https://i.imgflip.com/26am.jpg" alt="Grumpy Cat">
+      <div class="meme-caption">I tested your website on IE. It broke. Good.</div>
+    </div>
+
+    <div class="meme-card">
+      <img class="meme-img" src="https://i.imgflip.com/265k.jpg" alt="Futurama Fry">
+      <div class="meme-caption">Not sure if bug or feature 🤔</div>
+    </div>
+
+    <div class="meme-card">
+      <img class="meme-img" src="https://i.imgflip.com/3si4.jpg" alt="Success Kid">
+      <div class="meme-caption">Code worked on first try. Panic anyway.</div>
+    </div>
+
+    <div class="meme-card">
+      <img class="meme-img" src="https://i.imgflip.com/1bim.jpg" alt="Socially Awkward Penguin">
+      <div class="meme-caption">Opened dev tools in front of client. Forgot dark mode.</div>
+    </div>
+  </div>
+
+</body>
+
+</html>
